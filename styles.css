@@ -1,0 +1,134 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  background-color: #1a1a18;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+/* ── Container ── */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 36px;
+}
+
+.header__logo {
+  display: block;
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header__contact {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.80);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.header__contact:hover {
+  color: #fff;
+}
+
+/* ── Hero content ── */
+.hero__content {
+  padding-bottom: 72px;
+  max-width: 640px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding-top: 24px;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    width: 90px;
+  }
+
+  .header__contacts {
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .hero__content {
+    padding-bottom: 48px;
+  }
+}
