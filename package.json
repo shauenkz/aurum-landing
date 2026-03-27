@@ -1,0 +1,12 @@
+{
+  "name": "aurum-landing",
+  "version": "1.0.0",
+  "description": "Aurum Resources Limited landing page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
